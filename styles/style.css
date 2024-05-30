@@ -56,13 +56,14 @@ ol {
 .result {
   display: flex;
   flex-direction: column;
+  gap: 16px;
 }
 
 .result__video-container {
   display: flex;
   inline-size: 711px;
+  block-size: 386px;
   position: relative;
-  padding-block-end: 16px;
 }
 
 .result__video {
@@ -154,14 +155,17 @@ ol {
 
 .search-form__checkbox-list {
   display: flex;
-  gap: 10px;
+  gap: 15px;
   cursor: pointer;
 }
 
 .search-form__pseudo-checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   inline-size: 19px;
   block-size: 19px;
-  margin-right: 10px;
+  margin:1px 5px 1px 1px; 
   outline: 1px solid #fff;
   cursor: pointer;
 }
@@ -170,12 +174,16 @@ ol {
 
 .search-form__checkbox:checked + .search-form__pseudo-checkbox {
   content: '';
-  inline-size: 16px;
-  block-size: 16px;
+  inline-size: 15px;
+  block-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #fff;
   align-self: center;
-  border: 1px solid #fff;
-  outline-offset: 2px;
+  outline: 1px solid #fff;
+  outline-offset: 1px;
+  margin-left: 2px;
 }
 
 .search-form__label:hover .search-form__label-text {
@@ -184,7 +192,7 @@ ol {
 
 .search-form__label:focus-within {
   outline: 1px solid #fff;
-  outline-offset: 2px;
+  outline-offset: 1px;
 }
 
 /* стили для кнопок */
@@ -324,6 +332,11 @@ ol {
 }
 
 .content__video-card-description {
+  max-inline-size: 200px;
+  text-overflow: ellipsis; 
+  white-space: nowrap; 
+  overflow: hidden; 
+  word-break: break-all;
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   font-weight: 400;
@@ -340,15 +353,14 @@ ol {
 
 /* стили состояний карточек */
 
-.content__card-link :hover {
+.content__card-link:hover {
   text-decoration: underline;
 }
 
-.content__card-link :focus {
+.content__card-link:focus {
   outline: none;
 }
 
-.content__card-link :focus-visible {
+.content__card-link:focus-visible {
   outline: 1px solid #fff;
-  outline-offset: 1px;
 }
